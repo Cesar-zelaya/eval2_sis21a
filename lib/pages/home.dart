@@ -15,7 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void getEstudiantes() async {
     CollectionReference collectionReference =
-    FirebaseFirestore.instance.collection("tbproductos");
+    FirebaseFirestore.instance.collection("tb_productos");
     QuerySnapshot mensajes = await collectionReference.get();
     if (mensajes.docs.length != 0){
       for(var doc in mensajes.docs){
@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<List> getMensajes() async {
     List chats = [];
     CollectionReference collectionReference =
-    FirebaseFirestore.instance.collection("tbproductos");
+    FirebaseFirestore.instance.collection("tb_productos");
     QuerySnapshot mensajes = await collectionReference.get();
     if(mensajes.docs.length != 0){
       for (var doc in mensajes.docs){
