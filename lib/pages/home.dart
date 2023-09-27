@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
               return ListView.builder(
                   itemCount: snapshot.data?.length,
                   itemBuilder: ((context, index){
-                    return Text(snapshot.data?[index]["nombre"] + "-" + snapshot.data?[index]["precio"]);
+                    return Text(snapshot.data?[index]["nombre"] + "---" + snapshot.data?[index]["precio"].toString()+ "---" + snapshot.data?[index]["stock"].toString());
                   })
               );
             }else {
