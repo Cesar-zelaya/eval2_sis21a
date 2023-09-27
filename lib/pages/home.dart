@@ -13,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  void getEstudiantes() async {
+  void getproductos() async {
     CollectionReference collectionReference =
     FirebaseFirestore.instance.collection("tb_productos");
     QuerySnapshot mensajes = await collectionReference.get();
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           })
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: getEstudiantes,
+        onPressed: getproductos,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getEstudiantes();
+    getproductos();
 
   }
 
